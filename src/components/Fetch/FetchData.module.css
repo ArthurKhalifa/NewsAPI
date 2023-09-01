@@ -1,0 +1,112 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-image: linear-gradient(to bottom, #000000, #5779a5, #318fb4, #318fb4, #318fb4, #318fb4, #5779a5, #000000);
+    padding-top: 50px;
+}
+
+.return {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #bdc1d2, #abb4c9, #dddde3, #cecfda, #ececec);
+
+}
+
+
+.img {
+    width: 50%;
+    border-radius: 8px;
+    padding: 5px;
+    padding-right: 10px;
+}
+
+.author {
+    margin: 0;
+}
+
+.title {
+    width: 100%;
+}
+
+.desc {
+    margin: 0;
+    width: 100%;
+}
+
+
+
+.btn_div {
+    padding-top: 5px;
+}
+
+.btn {
+    padding: 5px 15px;
+    background-color: #2f76af;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: rgb(38, 95, 143);
+}
+
+.newsImg {
+    display: none;
+}
+
+.space {
+    margin: 20px;
+}
+
+.cat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.inicio{
+    position: absolute;
+    top: 80px;
+    left: 45%;
+    color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@media screen and (max-width: 940px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .right {
+        padding: 0px 50px;
+    }
+
+}
+
+@media screen and (max-width: 855px) {}

@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #bdc1d2, #abb4c9, #dddde3, #cecfda, #ececec );
+    padding: 10px 0px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.name {
+    font-weight: bold;
+    color: #307ebe;
+}
+
+.icon{
+    transition: 0.2s;
+}
+
+.icon:hover{
+    transition: 0.2s;
+    transform: scale(1.2); 
+}
