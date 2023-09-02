@@ -16,34 +16,19 @@ export const FetchData = ({ cat }, props) => {
 
     // Função para buscar dados da API ou retornar do cache
     const fetchData = async (category) => {
-
-        axios.get('https://newsapi.org/v2/endpoint', {
-            headers: {
-                'Accept': 'application/json',
-                'Accept-Language': 'en',
-                'User-Agent': 'Your App Name',
-            },
-            http2: true, // Use HTTP/2
-        })
-            .then((response) => {
-                renderCards()
-            })
-            .catch((error) => {
-                console.error('Erro ao buscar os dados:', error);
-            });
-
-
-
         try {
             if (cache[category]) {
                 // Se os dados já estiverem em cache, use-os
                 setData(cache[category]);
             } else {
                 const response = await axios.get(
-
                     category
                         ? `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`
-                        : `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
+                        : `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`,
+                    {
+                        // Adicione a opção http2 como true
+                        http2: true,
+                    }
                 );
 
                 setData(response.data.articles);
