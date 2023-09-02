@@ -3,8 +3,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right, #bdc1d2, #abb4c9, #dddde3, #cecfda, #ececec );
+    background-color: #2a2d35;
     padding: 10px 0px;
+    color: #fff;
 }
 
 .icons {

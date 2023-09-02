@@ -2,33 +2,35 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-image: linear-gradient(to right, #ececec, #dddde3, #cecfda, #bdc1d2, #abb4c9);
+    background-color: #2a2d35;
     padding: 10px 0px;
     position: fixed;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     z-index: 999;
+    transition: 1s;
+}
+
+.header a:hover{
+    color: #2f76af;
 }
 
 .links {
     display: flex;
 }
 
-.links{
-    color: red;
-}
 
 .novidades {
     color: #2f76af;
 }
 
 .black {
-    color: black;
+    color: #fff;
 }
 
 .href {
     font-weight: 700;
-   
+
 }
 
 ul {
@@ -39,16 +41,13 @@ ul {
     gap: 20px;
     list-style: none;
     margin: 0;
-    
+
 }
 
 .href {
     text-decoration: none;
-    color: black;
-}
+    color: #fff;
 
-.href:hover {
-    color: #2f76af;
 }
 
 /* = HAMBURGUER = */
@@ -126,6 +125,7 @@ ul {
 
     .linksClosed {
         display: none;
+        transition: 1s;
     }
 
     .hamburguer {
@@ -139,7 +139,7 @@ ul {
         right: 0px;
         top: 0px;
         flex-direction: column;
-        background-image: linear-gradient(to right top, #c3c6d5, #bec2d2, #b8bed0, #b3bacd, #adb6ca);
+        background-color: #2a2d35;
         gap: 0;
         transition: 1s;
     }
@@ -151,7 +151,7 @@ ul {
 
     li {
         padding: 5px 20px;
-       
+
     }
 
     .href {
@@ -160,7 +160,7 @@ ul {
     }
 
     li:hover {
-        background-color: #fff;
+        background-color: #2f76af;
     }
 
 }
