@@ -1,3 +1,12 @@
+# DEMO
+
+
+![ezgif com-gif-maker](https://github.com/ArthurKhalifa/NewsAPI/assets/128056446/53379304-bc66-455d-9294-93c44b19f22c)
+
+## Mobile
+
+![ezgif com-video-to-gif](https://github.com/ArthurKhalifa/NewsAPI/assets/128056446/92750250-8e7d-4a91-bc18-445ce55d7020)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
