@@ -11,7 +11,7 @@ export const ReadMe = () => {
             <div className={style.card}>
                 <h1>Sinto muito</h1>
                 <h6>Essa API não funciona quando é compartilhada, sendo assim, aqui está um link de um breve vídeo no linkedin mostrando mais detalhes do projeto. Obrigado pela compreenção. </h6>
-                <a href="##" target='blank_'><img src={play} className={style.play} /></a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7104877393093259264/" target='blank_'><img src={play} className={style.play} /></a>
                 <img src={sorry} className={style.sorry} />
                 <img src={sad} className={style.sad} />
             </div>
