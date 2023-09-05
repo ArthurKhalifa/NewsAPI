@@ -1,12 +1,16 @@
+:root {
+    --color: #cf692d;
+}
+
 .container {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    /* background-image: linear-gradient(to bottom, #000000, #5779a5, #318fb4, #318fb4, #318fb4, #318fb4, #5779a5, #000000); */
-    padding-top: 50px;
-
-    background-color: #121212;
+    background-image: url('../img/uni.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #DFDFDF;
     overflow-x: hidden;
 }
@@ -15,42 +19,46 @@
     display: flex;
 }
 
-.carouselOn {
-    display: none;
-}
-
-
-
 .return {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     padding: 20px;
+   
 }
 
 .card {
     width: 500px;
     display: flex;
     align-items: center;
-    /* flex-direction: column; */
     justify-content: center;
-    border-right: 15px solid #2f76af;
+    border-right: 15px solid var(--color);
     border-left: 15px solid transparent;
     padding: 20px;
-    border-top: 2px solid #121212;
-    border-bottom: 2px solid #121212;
     border-radius: 8px;
+    margin-top: 80px;
     transition: 0.2s;
-
+    z-index: 9;
 }
 
 .card:hover {
-    margin-left: 100px;
     transition: 0.2s;
-    border-top: 2px solid #2f76af;
-    border-bottom: 2px solid #2f76af;
-    border-left: 15px solid #2f76af;
+    transform: scale(1.2);
+
+
+    .title {
+        color: var(--color);
+
+    }
+
+    .img {
+        border-bottom: 1px solid var(--color);
+        border-top: 1px solid var(--color);
+        padding: 0;
+        margin: 0;
+    }
+
 }
 
 .img {
@@ -68,13 +76,13 @@
 
 a {
     text-decoration: none;
-    color: #2f76af;
+    color: var(--color);
     cursor: pointer;
 }
 
 .title {
     cursor: pointer;
-    color: #2f76af;
+    color: var(--color);
 }
 
 .title:hover {
@@ -85,10 +93,6 @@ a {
     color: #fff;
     width: 100%;
     cursor: pointer;
-}
-
-.title2:hover {
-    color: #2f76af;
 }
 
 .desc {
@@ -104,7 +108,7 @@ a {
 
 .btn {
     padding: 5px 15px;
-    background-color: #2f76af;
+    background-color: var(--color);
     color: white;
     font-weight: bold;
     border: none;
@@ -123,13 +127,20 @@ a {
     margin: 20px;
 }
 
-.cat {
+.catDiv {
+    position: fixed;
+    z-index: 9999;
+    padding: 5px;
+    margin-top: 56px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(55, 88, 199, 0.781);
+    background-color: #fff;
+}
+
+.cat {
+    color: var(--color);
+    text-shadow: 2px 2px 4px rgba(121, 120, 103, 0.781);
 }
 
 .more {
@@ -154,9 +165,10 @@ a {
     background-color: #3C4042;
     padding: 20px;
     transition: 0.2s;
+    margin-top: 5px;
     cursor: pointer;
     gap: 20px;
-    border-left: 15px solid #2f76af;
+    border-left: 15px solid var(--color);
     border-right: 15px solid transparent;
 }
 
@@ -167,7 +179,11 @@ a {
 
 .card2:Hover {
     transform: scale(1.2);
-    border-right: 15px solid #2f76af;
+    border-right: 15px solid var(--color);
+
+    .title2 {
+        color: var(--color);
+    }
 }
 
 .img2 {
@@ -192,72 +208,88 @@ a {
     display: none;
 }
 
+@media screen and (max-width: 1024px) {
+    .catDiv {
+        margin-top: 53px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catDiv {
+        margin-top: 48px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .catDiv {
+        margin-top: 42px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .catDiv {
+        margin-top: 40px;
+    }
+}
+
 @media screen and (min-width: 1440px) {
     .card {
         width: 60%;
     }
 }
 
-@media screen and (max-width: 1030px) {
-    .newsImgx {
-        display: none;
-    }
-
-    .img {
-        min-height: 200px;
-    }
-
-    .return {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .returnL {
-        display: flex;
-    }
-
-    .card {
-        width: 300px;
-        position: relative;
-        border: none;
-    }
-
-    .card:hover {
-        margin: 0;
-    }
-
-    .card2 {
-        width: 70%;
-    }
-
-    /*=====*/
-    .carouselOff {
-        display: none;
-    }
-
-    .carouselOn {
-        display: flex;
-        width: 100%;
-    }
-
-    .title {
-        position: absolute;
-        color: white;
-        text-align: center;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        padding: 0px 30px;
-    }
-
-    .img {
-        width: 110%;
-    }
-
-    .card:hover {
-        transform: scale(1.2);
-        border: none;
-    }
-
+.newsImgx {
+    display: none;
 }
+
+.img {
+    min-height: 200px;
+}
+
+.return {
+    flex-direction: column;
+    align-items: center;
+}
+
+.returnL {
+    display: flex;
+}
+
+.card {
+    width: 300px;
+    position: relative;
+    border: none;
+}
+
+
+.card2 {
+    width: 70%;
+}
+
+/*=====*/
+.carouselOff {
+    display: none;
+}
+
+.carouselOn {
+    display: flex;
+    width: 100%;
+}
+
+.title {
+    position: absolute;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0px 30px;
+}
+
+.img {
+    width: 110%;
+}
+
+
+@media screen and (max-width: 1030px) {}
 
 
 @media screen and (max-width: 940px) {
@@ -272,13 +304,12 @@ a {
         width: 110%;
     }
 
-    .card:hover {
-        border: none;
-    }
 }
 
 @media screen and (max-width: 876px) {
-
+.return{
+    margin-top: 95px;
+}
     .desc,
     .btn {
         display: none;
@@ -298,7 +329,7 @@ a {
         transition: 0.2s;
         cursor: pointer;
         gap: 20px;
-        border-left: 1px solid #2f76af;
+        border-left: 1px solid var(--color);
     }
 
     .returnR {

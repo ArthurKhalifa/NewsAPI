@@ -1,7 +1,7 @@
 import React from 'react'
-
+import './App.css';
 export const Entertainment = () => {
   return (
-    <div>Entertainment</div>
+    <div className='cat'><h1>Entertainment</h1></div>
   )
 }

@@ -15,12 +15,10 @@ const Navbar = () => {
     return (
         <div className={style.all}>
             <div className={style.header}>
-                <h2 className={style.novidades}>N<span className={style.black}>EW</span>S</h2>
-
+                <Link to="/"><h1 className={style.novidades}>N<span className={style.black}>EW</span>S</h1></Link>
                 <div className={active ? `${style.icon2} ${style.iconActive}` : `${style.icon2}`} onClick={ToggleMode}>
                     <div className={`${style.hamburguer} ${style.hamburguerIcon}`}></div>
                 </div>
-
                 <div className={style.links}>
                     <ul className={active ? `${style.links2}` : `${style.linksClosed}`}>
                         <li>

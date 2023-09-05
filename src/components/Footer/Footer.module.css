@@ -15,11 +15,12 @@
 
 .name {
     font-weight: bold;
-    color: #307ebe;
+    color: #cf692d;
 }
 
 .icon{
     transition: 0.2s;
+    width: 32px;
 }
 
 .icon:hover{

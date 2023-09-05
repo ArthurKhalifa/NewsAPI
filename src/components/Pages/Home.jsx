@@ -6,7 +6,6 @@ import style from '../Fetch/FetchData.module.css'
 export const Home = () => {
     return (
         <div>
-            <h1 className={style.inicio}>General</h1>
             <FetchData />
         </div>
     )

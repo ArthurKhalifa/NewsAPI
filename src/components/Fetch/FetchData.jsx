@@ -5,10 +5,11 @@ import style from '../Fetch/FetchData.module.css'
 
 import API_KEY from '../Keys';
 
+//ANIMATION
+import Pulse from 'react-reveal/Pulse';
 
 //IMG
-import gif from '../img/gif.gif'
-import gif3 from '../img/gif3.gif'
+import gif3 from '../img/gif3.png'
 
 export const FetchData = ({ cat }, props) => {
     const [data, setData] = useState([]);
@@ -67,40 +68,29 @@ export const FetchData = ({ cat }, props) => {
             }
 
             return (
-                <div className={style.full}>
-                    <div className={`${style.card} ${style.carouselOff}`} key={index}>
-                        <img src={item.urlToImage} className={style.img} />
-                        <div className={style.right}>
-                            <p className={style.author}>{item.author}</p>
-                            <a href={item.url} target='blank_'>  <h5 className={style.title}>{item.title}</h5></a>
-
-                            {/* <p className={style.desc}>{item.description}</p> */}
-                            {/* <div className={style.btn_div}>
-                                <a href={item.url} target='blank_'><button className={style.btn}>Ver mais</button></a>
-                            </div> */}
-                        </div>
-                    </div>
-                    {/* =============== */}
-                    <div className={style.carouselOn}>
-                        <a href={item.url} target='blank_'><div className={style.card} key={index}>
+                <Pulse>
+                    <div className={style.full}>
+                        {/* =============== */}
+                        <div className={style.carouselOn}>
                             <a href={item.url} target='blank_'>
-                                <img src={item.urlToImage} className={style.img} />
+                                <div className={style.card} key={index}>
+                                    <img src={item.urlToImage} className={style.img} />
+                                    <h5 className={style.title}>{item.title}</h5>
+                                </div>
                             </a>
-                            <h5 className={style.title}>{item.title}</h5>
-                        </div></a>
-
-                    </div>
-                    {/* =============== */}
-                    <div className={style.off}>
-                        <div className={style.card2} key={index}>
-                            <div className={style.right2}>
-                                <p className={style.author2}>{item.author}</p>
-                                <a href={item.url} target='blank_'><h6 className={style.title2}>{item.title}</h6></a>
+                        </div>
+                        {/* =============== */}
+                        <div className={style.off}>
+                            <div className={`${style.card2} ${style.marg}`} key={index}>
+                                <div className={style.right2}>
+                                    <p className={style.author2}>{item.author}</p>
+                                    <a href={item.url} target='blank_'><h6 className={style.title2}>{item.title}</h6></a>
+                                </div>
+                                <a href={item.url} target='blank_'><img src={item.urlToImage} className={style.img2} /></a>
                             </div>
-                            <a href={item.url} target='blank_'><img src={item.urlToImage} className={style.img2} /></a>
                         </div>
                     </div>
-                </div>
+                </Pulse>
             );
         });
     };
@@ -118,10 +108,8 @@ export const FetchData = ({ cat }, props) => {
                     <div className={style.right2}>
                         <p className={style.author2}>{item.author}</p>
                         <a href={item.url} target='blank_'>  <h6 className={style.title2}>{item.title}</h6></a>
-
                     </div>
                     <a href={item.url} target='blank_'> <img src={item.urlToImage} className={style.img2} /></a>
-
                 </div>
             );
         });
@@ -129,7 +117,9 @@ export const FetchData = ({ cat }, props) => {
 
     return (
         <div className={style.container}>
-            <h1 className={style.cat}>{cat}</h1>
+            <div className={style.catDiv}>
+                <h2 className={style.cat}>{cat}</h2>
+            </div>
             <div className={style.return}>
                 <div className={style.returnL}>
                     {data.length > 0 ? (
@@ -137,7 +127,6 @@ export const FetchData = ({ cat }, props) => {
                     ) : (
                         <p className={style.loading}>Loading...</p>
                     )}
-                    <img src={gif} className={`${style.newsImg2} ${style.newsImgx}`} />
                 </div>
                 <div className={style.returnR}>
                     <img src={gif3} className={style.newsImg2} />

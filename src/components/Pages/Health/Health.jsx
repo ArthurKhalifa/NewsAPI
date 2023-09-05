@@ -1,7 +1,7 @@
 import React from 'react'
-
+import './App.css';
 export const Health = () => {
   return (
-    <div>Health</div>
+    <div><h1 className='cat'>Health</h1></div>
   )
 }
